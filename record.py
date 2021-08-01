@@ -53,7 +53,6 @@ def writeMySQL(val):
 class AutovipClient(BLiveClient):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.label = kwargs['label']
 
     async def _on_buy_guard(self, message: GuardBuyMessage):
         val = parseMessage(message)
